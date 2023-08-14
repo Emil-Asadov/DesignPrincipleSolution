@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenClosedPrinciple.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace OpenClosedPrinciple
         public Form1()
         {
             InitializeComponent();
+        }
+        readonly ClassMain cls = new ClassMain();
+        private void btnABank_Click(object sender, EventArgs e)
+        {
+            cls.SendOperation(new ClassABank(), "123", 10);
+        }
+
+        private void btnBBank_Click(object sender, EventArgs e)
+        {
+            cls.SendOperation(new ClassABank(), "123", 10);
         }
     }
 }

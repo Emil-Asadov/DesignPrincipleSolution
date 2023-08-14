@@ -20,12 +20,12 @@ namespace OpenClosedPrinciple
         readonly ClassMain cls = new ClassMain();
         private void btnABank_Click(object sender, EventArgs e)
         {
-            cls.SendOperation(new ClassABank(), "123", 10);
+            MessageBox.Show($"{cls.SendOperation(new ClassABank(), "123", 10)}");
         }
 
         private void btnBBank_Click(object sender, EventArgs e)
         {
-            cls.SendOperation(new ClassABank(), "123", 10);
+            MessageBox.Show($"{cls.SendOperation(new ClassBBank(), "123", 10)}");
         }
     }
 }
